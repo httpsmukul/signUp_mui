@@ -14,7 +14,7 @@ export const User = () => {
 	const [last, setlast] = useState("");
 	const [Dob, setdob] = useState("");
 	const [pass, setpass] = useState(0);
-
+	const [res, setres] = useState("");
 	const handel = (e) => {
 		e.preventDefault();
 		Work(user, last, pass);
@@ -22,6 +22,16 @@ export const User = () => {
 		// console.log(user);
 		const err = Data(pass);
 		console.log(err);
+		if (err == "scuess") {
+			setres("Thanks you for visiting here have a greate day!  :)");
+		} else {
+			setres("please check your details your password is week");
+		}
+
+		//
+		//
+		//
+
 		const createNotification = (err) => {
 			return () => {
 				switch (err) {
@@ -94,6 +104,8 @@ export const User = () => {
 					sign up
 				</Button>
 			</form>
+			<br />
+			<div style={{ color: "red" }}>{res}</div>
 		</>
 	);
 };
