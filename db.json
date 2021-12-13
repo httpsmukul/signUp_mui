@@ -1,21 +1,10 @@
 {
   "user": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "username": "mukul",
-      "Email": "kumar",
-      "Pass": "456465456",
-      "id": 2
-    },
-    {
-      "First_name": "",
-      "last_name": "",
-      "Pass": 0,
-      "id": 3
+      "First_name": "Mukul",
+      "last_name": "Kumar",
+      "Pass": "1234",
+      "id": 1
     }
   ],
   "comments": [

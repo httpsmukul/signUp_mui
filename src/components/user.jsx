@@ -1,5 +1,10 @@
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import "react-notifications/lib/notifications.css";
+import {
+	NotificationContainer,
+	NotificationManager,
+} from "react-notifications";
 // import { color } from "@mui/system";
 import { useState, useEffect } from "react";
 import { Work } from "./costum.js";
@@ -15,7 +20,38 @@ export const User = () => {
 		Work(user, last, pass);
 		// console.log("workimg");
 		// console.log(user);
-		console.log(Data);
+		const err = Data(pass);
+		console.log(err);
+		const createNotification = (err) => {
+			return () => {
+				switch (err) {
+					case "info":
+						NotificationManager.info("Info message");
+						break;
+					case "scuess":
+						NotificationManager.success("Success message", "Title here");
+						break;
+					case "Error":
+						NotificationManager.warning(
+							"Warning message",
+							"Close after 3000ms",
+							3000
+						);
+						break;
+					case "error":
+						NotificationManager.error(
+							"Error message",
+							"Click me!",
+							5000,
+							() => {
+								alert("callback");
+							}
+						);
+						break;
+				}
+			};
+		};
+		createNotification(err);
 	};
 	return (
 		<>
