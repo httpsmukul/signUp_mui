@@ -1,0 +1,31 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "username": "mukul",
+      "Email": "kumar",
+      "Pass": "456465456",
+      "id": 2
+    },
+    {
+      "First_name": "",
+      "last_name": "",
+      "Pass": 0,
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
